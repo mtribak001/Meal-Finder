@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meal Finder</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Meal Finder</h1>
+      <div class="flex">
+        <form class="flex" id="submit">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for meals or keywords"
+          />
+          <button class="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button class="random-btn" id="random">
+          <i class="fas fa-random"></i>
+        </button>
+      </div>
+       <div class="nutritious-meal-container">
+        <h1>Nutrition meal generator</h1>
+        <form class="nutritionForm" id="nutritionForm">
+          <div>
+          <label for="minFat">Min Fat (g):</label>
+          <input type="number" id="minFat" name="minFat" min="0" >
+          <label for="maxFat">Max Fat (g):</label>
+          <input type="number" id="maxFat" name="maxFat" min="0" >
+         </div>
+         <div>
+          <label for="minCarbs">Min Carbs (g):</label>
+          <input type="number" id="minCarbs" name="minCarbs" min="0" >
+          <label for="maxCarbs">Max Carbs (g):</label>
+          <input type="number" id="maxCarbs" name="maxCarbs" min="0" >
+          </div>
+          <div>
+          <label for="minSugar">Min Sugar (g):</label>
+          <input type="number" id="minSugar" name="minSugar" min="0" >
+          <label for="maxSugar">Max Sugar (g):</label>
+          <input type="number" id="maxSugar" name="maxSugar" min="0" >
+          </div>
+          <button id="n-search-btn" type="submit">Search</button>
+        </form>
+       </div>
+      <div id="result-heading"></div>
+      <div id="meals" class="meals"></div>
+      <div id="nutrition-meals" class="meals"></div>
+      <div id="single-meal"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
